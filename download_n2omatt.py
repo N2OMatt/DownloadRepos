@@ -1,11 +1,14 @@
 #!/usr/bin/python
 import os;
 import os.path;
+import termcolor;
 
+## Paths.
 GIT_URL      = "https://github.com/n2omatt/";
 N2OMATT_PATH = "~/Documents/Projects/N2OMatt/";
 
-REPOS = { 
+# Repositiory - Directory Information.
+REPOS = {
     "DownloadRepos"     : N2OMATT_PATH,
     "LinuxTidyAndClean" : N2OMATT_PATH,
     "dots"              : N2OMATT_PATH,
@@ -14,13 +17,16 @@ REPOS = {
     "Study"             : N2OMATT_PATH
 };
 
-
+# Download the repos...
 for repo_name in sorted(REPOS.keys()):
+    #Build the GIT url and the location of the repo.
     full_git_url   = os.path.join(GIT_URL, repo_name + ".git");
     full_repo_path = os.path.expanduser(os.path.join(REPOS[repo_name], repo_name));
 
+
+    #Already have this repo in this computer.s
     if(os.path.isdir(full_repo_path)):
-        print "{} is already downloaded....".format(repo_name);
+        print "[{}] is already downloaded....".format(termcolor.colored(repo_name, "blue"));
         continue;
 
     os.system("mkdir -p {}".format(full_repo_path));
