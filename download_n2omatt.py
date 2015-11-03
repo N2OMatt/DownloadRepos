@@ -14,7 +14,8 @@ REPOS = {
     "dots"              : N2OMATT_PATH,
     "lights-out"        : N2OMATT_PATH,
     "ProjectEuler"      : N2OMATT_PATH,
-    "Study"             : N2OMATT_PATH
+    "Study"             : N2OMATT_PATH,
+    "MyCerts"           : N2OMATT_PATH
 };
 
 # Download the repos...
