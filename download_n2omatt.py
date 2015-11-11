@@ -9,13 +9,14 @@ N2OMATT_PATH = "~/Documents/Projects/N2OMatt/";
 
 # Repositiory - Directory Information.
 REPOS = {
-    "DownloadRepos"     : N2OMATT_PATH,
-    "LinuxTidyAndClean" : N2OMATT_PATH,
-    "dots"              : N2OMATT_PATH,
-    "lights-out"        : N2OMATT_PATH,
-    "ProjectEuler"      : N2OMATT_PATH,
-    "Study"             : N2OMATT_PATH,
-    "MyCerts"           : N2OMATT_PATH
+    "DownloadRepos"      : N2OMATT_PATH,
+    "LinuxTidyAndClean"  : N2OMATT_PATH,
+    "dots"               : N2OMATT_PATH,
+    "lights-out"         : N2OMATT_PATH,
+    "n2omatt.github.com" : N2OMATT_PATH,
+    "ProjectEuler"       : N2OMATT_PATH,
+    "Study"              : N2OMATT_PATH,
+    "MyCerts"            : N2OMATT_PATH
 };
 
 # Download the repos...
