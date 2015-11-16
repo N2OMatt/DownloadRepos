@@ -15,7 +15,6 @@ REPOS = {
     "lights-out"         : N2OMATT_PATH,
     "n2omatt.github.com" : N2OMATT_PATH,
     "ProjectEuler"       : N2OMATT_PATH,
-    "Study"              : N2OMATT_PATH,
     "MyCerts"            : N2OMATT_PATH
 };
 
