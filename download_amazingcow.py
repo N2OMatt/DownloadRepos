@@ -28,6 +28,7 @@ REPOS = {
     "Game_Taz"   : GAMES_GAME_PATH,
     #Libs
     "ColorHelperCpp" : LIBS_PATH,
+    "Termcolor_cpp"  : LIBS_PATH,
     "UIKitHelpers"   : LIBS_PATH,
     #Tools.
     "AmazingBuild"         : TOOLS_PATH,
