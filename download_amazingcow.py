@@ -19,9 +19,10 @@ REPOS = {
     #Games.
     "101_Games_To_Create" : GAMES_PATH,
     #Games - Core
+    "Core_Genius"       : GAMES_CORE_PATH,
     "Core_LightsOff"    : GAMES_CORE_PATH,
     "Core_Mastermind"   : GAMES_CORE_PATH,
-    "Core_Genius"       : GAMES_CORE_PATH,
+    "Core_Minesweeper"  : GAMES_CORE_PATH,
     "Core_PegSolitaire" : GAMES_CORE_PATH,
     #Games - Game
     "Game_Snake" : GAMES_GAME_PATH,
