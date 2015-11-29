@@ -5,11 +5,11 @@ import termcolor;
 
 ## Paths.
 GIT_URL      = "https://github.com/imidiar/";
-IMIDIAR_PATH = "~/Documents/Projects/Imidiar/OpenSource";
+IMIDIAR_PATH = "~/Documents/Projects/Imidiar/";
 
 # Repositiory - Directory Information.
 REPOS = {
-    #Nothing yet...
+    "Download_AmazingCow_Tools" : IMIDIAR_PATH
 };
 
 
