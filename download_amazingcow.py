@@ -24,6 +24,7 @@ REPOS = {
     "Core_Mastermind"   : GAMES_CORE_PATH,
     "Core_Minesweeper"  : GAMES_CORE_PATH,
     "Core_PegSolitaire" : GAMES_CORE_PATH,
+    "Core_Snake"        : GAMES_CORE_PATH,
     "CoreCoord"         : GAMES_CORE_PATH,
     #Games - Game
     "Game_Snake" : GAMES_GAME_PATH,
