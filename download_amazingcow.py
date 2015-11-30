@@ -26,6 +26,7 @@ REPOS = {
     "Core_PegSolitaire" : GAMES_CORE_PATH,
     "Core_Snake"        : GAMES_CORE_PATH,
     "CoreCoord"         : GAMES_CORE_PATH,
+    "CoreClock"         : GAMES_CORE_PATH,
     #Games - Game
     "Game_Snake" : GAMES_GAME_PATH,
     "Game_Taz"   : GAMES_GAME_PATH,
