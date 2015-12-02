@@ -22,11 +22,12 @@ REPOS = {
     "CoreClock"        : GAMES_CORE_PATH,
     "CoreCoord"        : GAMES_CORE_PATH,
     "CoreGenius"       : GAMES_CORE_PATH,
+    "CoreHangman"      : GAMES_CORE_PATH,
     "CoreLightsOff"    : GAMES_CORE_PATH,
     "CoreMastermind"   : GAMES_CORE_PATH,
     "CoreMinesweeper"  : GAMES_CORE_PATH,
     "CorePegSolitaire" : GAMES_CORE_PATH,
-    "CoreSnake"        : GAMES_CORE_PATH,
+    "Core_Snake"       : GAMES_CORE_PATH,
     #Games - Game
     "Game_Snake" : GAMES_GAME_PATH,
     "Game_Taz"   : GAMES_GAME_PATH,
