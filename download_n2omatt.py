@@ -13,7 +13,7 @@ REPOS = {
     "DownloadRepos"      : N2OMATT_PATH,
     "lights-out"         : N2OMATT_PATH,
     "LinuxTidyAndClean"  : N2OMATT_PATH,
-    "MyCerts"            : N2OMATT_PATH
+    "MyCerts"            : N2OMATT_PATH,
     "n2omatt.github.com" : N2OMATT_PATH,
     "ProjectEuler"       : N2OMATT_PATH,
 };
