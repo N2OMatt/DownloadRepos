@@ -33,13 +33,13 @@ REPOS = {
     "Game_Snake" : GAMES_GAME_PATH,
     "Game_Taz"   : GAMES_GAME_PATH,
     #Libs
-    "ColorHelperCpp" : LIBS_PATH,
-    "Termcolor_cpp"  : LIBS_PATH,
-    "UIKitHelpers"   : LIBS_PATH,
+    "ColorHelper_cpp" : LIBS_PATH,
+    "Termcolor_cpp"   : LIBS_PATH,
+    "UIKitHelpers"    : LIBS_PATH,
     #Tools.
     "AmazingBuild"         : TOOLS_PATH,
     "COWTODO"              : TOOLS_PATH,
-    "CppGuardChecker"      : TOOLS_PATH,
+    "GuardChecker"         : TOOLS_PATH,
     "FrameMerger"          : TOOLS_PATH,
     "Gosh"                 : TOOLS_PATH,
     "ImageOrganizer"       : TOOLS_PATH,
