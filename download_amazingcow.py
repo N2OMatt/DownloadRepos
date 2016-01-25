@@ -56,7 +56,7 @@ for repo_name in sorted(REPOS.keys()):
     full_git_url   = os.path.join(GIT_URL, repo_name + ".git");
     full_repo_path = os.path.expanduser(os.path.join(REPOS[repo_name], repo_name));
 
-    #Already have this repo in this computer.s
+    #Already have this repo in this computer
     if(os.path.isdir(full_repo_path)):
         print "[{}] is already downloaded....".format(termcolor.colored(repo_name, "blue"));
         continue;
