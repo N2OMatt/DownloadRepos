@@ -43,6 +43,7 @@ REPOS = {
     "FrameMerger"          : TOOLS_PATH,
     "Gosh"                 : TOOLS_PATH,
     "ImageOrganizer"       : TOOLS_PATH,
+    "Linux_USBBootCreator" : TOOLS_PATH,
     "OSX_USBBootCreator"   : TOOLS_PATH,
     "PhotoShow"            : TOOLS_PATH,
     "SpriteSheetExtractor" : TOOLS_PATH,
