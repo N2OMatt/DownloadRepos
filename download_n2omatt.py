@@ -4,7 +4,7 @@ import os.path;
 import termcolor;
 
 ## Paths.
-GIT_URL      = "https://github.com/n2omatt/";
+GIT_URL      = "git@github.com:AmazingCow/";
 N2OMATT_PATH = "~/Documents/Projects/N2OMatt/";
 
 # Repositiory - Directory Information.

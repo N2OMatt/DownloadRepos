@@ -4,7 +4,7 @@ import os.path;
 import termcolor;
 
 ## Paths.
-GIT_URL           = "https://github.com/AmazingCow/";
+GIT_URL           = "git@github.com:AmazingCow/";
 ENGINES_PATH      = "~/Documents/Projects/AmazingCow/OpenSource/Engines/";
 GAMES_PATH        = "~/Documents/Projects/AmazingCow/OpenSource/Games/";
 GAMES_GAME_PATH   = "~/Documents/Projects/AmazingCow/OpenSource/Games/Game/";
