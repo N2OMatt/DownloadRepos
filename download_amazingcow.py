@@ -16,8 +16,6 @@ TOOLS_PATH        = "~/Documents/Projects/AmazingCow/OpenSource/Tools/";
 REPOS = {
     #Engines.
     "MonsterFramework" : ENGINES_PATH,
-    #Games.
-    "101_Games_To_Create" : GAMES_PATH,
     #Games - Core
     "CoreClock"        : GAMES_CORE_PATH,
     "CoreCoord"        : GAMES_CORE_PATH,
@@ -28,6 +26,7 @@ REPOS = {
     "CoreMinesweeper"  : GAMES_CORE_PATH,
     "CorePegSolitaire" : GAMES_CORE_PATH,
     "CoreColorGrid"    : GAMES_CORE_PATH,
+    "CoreWordsSearch"  : GAMES_CORE_PATH,
     "Core_Snake"       : GAMES_CORE_PATH,
     #Games - Game
     "Game_Snake" : GAMES_GAME_PATH,
