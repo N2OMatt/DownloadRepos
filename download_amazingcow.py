@@ -25,6 +25,7 @@ ORGANIZATION_NAMES = [
     "AmazingCow-Game",
     "AmazingCow-Libs",
     "AmazingCow-Tools",
+    "AmazingCow-Imidiar",
     "AmazingCow",
 ];
 
