@@ -35,8 +35,8 @@ ORGANIZATION_NAMES = [
 def make_dir(name):
     fullname = os.path.join(BASE_PATH, name);
     if(os.path.isdir(fullname) == False):
-        print "Creating directory: ({})".format(fullname);
-        os.system("mkdir -p {}".format(fullname));
+        print "Creating directory: ({0})".format(fullname);
+        os.system("mkdir -p {0}".format(fullname));
 
     return fullname;
 
@@ -46,7 +46,7 @@ def fetch_list_repos(organization_name):
     data     = json.loads(response.read());
 
 
-    print "Fetching repos for: ({})".format(organization_name);
+    print "Fetching repos for: ({0})".format(organization_name);
     repos = [];
     for info in data:
         repos.append(
@@ -58,7 +58,7 @@ def fetch_list_repos(organization_name):
 
 def clone_repos(repos_info, repos_dir):
     for repo_info in repos_info:
-        print "Clonning repo ({}) in ({})".format(repo_info["name"], repos_dir);
+        print "Clonning repo ({0}) in ({1})".format(repo_info["name"], repos_dir);
 
         repo_full_dir = os.path.join(repos_dir, repo_info["name"]);
 
@@ -66,30 +66,13 @@ def clone_repos(repos_info, repos_dir):
             print "Repo already cloned...";
             return;
 
-        os.system("git clone {} {}".format(repo_info["url"], repo_full_dir));
+        os.system("git clone {0} {1}".format(repo_info["url"], repo_full_dir));
 
 
 for organization_name in ORGANIZATION_NAMES:
-    repos_dir  = make_dir(organization_name);
-    repos_info = fetch_list_repos(organization_name);
-    clone_repos(repos_info, repos_dir);
+     repos_dir  = make_dir(organization_name);
+     repos_info = fetch_list_repos(organization_name);
+     clone_repos(repos_info, repos_dir);
 
-    print "----"
+     print "----"
 
-#
-
-    # print a["clone_url"];
-# print response.read();
-# # Download the repos...
-# for repo_name in sorted(REPOS.keys()):
-#     #Build the GIT url and the location of the repo.
-#     full_git_url   = os.path.join(GIT_URL, repo_name + ".git");
-#     full_repo_path = os.path.expanduser(os.path.join(REPOS[repo_name], repo_name));
-
-#     #Already have this repo in this computer
-#     if(os.path.isdir(full_repo_path)):
-#         print "[{}] is already downloaded....".format(termcolor.colored(repo_name, "blue"));
-#         continue;
-
-#     os.system("mkdir -p {}".format(full_repo_path));
-#     os.system("git clone {} {}".format(full_git_url, full_repo_path));
