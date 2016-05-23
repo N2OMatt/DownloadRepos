@@ -51,9 +51,10 @@ def clone_repos(repos_info, repos_dir):
 
         if(os.path.isdir(repo_full_dir)):
             print "Repo already cloned...";
-            return;
+            continue;
 
         os.system("git clone {0} {1}".format(repo_info["url"], repo_full_dir));
+
 
 
 repos_dir  = make_dir("N2OMatt");
