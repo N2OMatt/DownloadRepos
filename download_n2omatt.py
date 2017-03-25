@@ -53,8 +53,19 @@ def clone_repos(repos_info, repos_dir):
             print "Repo already cloned...";
             continue;
 
-        os.system("git clone {0} {1}".format(repo_info["url"], repo_full_dir));
+        ## Commands...
+        mkdir    = "mkdir -p {0}".format(repo_full_dir);
+        cd       = "cd {0}".format(repo_full_dir);
+        clone    = "git clone {0} .".format(repo_info["url"]);
+        sub_init = "git submodule update --init --recursive";
 
+        full_cmd = "{0} && {1} && {2} && {3}".format(
+            mkdir,
+            cd,
+            clone,
+            sub_init
+        );
+        os.system(full_cmd);
 
 
 repos_dir  = make_dir("N2OMatt");
