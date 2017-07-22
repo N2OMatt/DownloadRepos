@@ -1,4 +1,15 @@
 #!/usr/bin/python
+##----------------------------------------------------------------------------##
+## File      : download_amazingcow.py                                         ##
+## Project   : DownloadRepos                                                  ##
+## Author    : n2omatt <n2omatt@amazingcow.com>                               ##
+## Date      : 2015                                                           ##
+## License   : GPLv3                                                          ##
+## Copyright : N2OMatt - Copyright (c) 2015, 2017                             ##
+##                                                                            ##
+## Description:                                                               ##
+##                                                                            ##
+##----------------------------------------------------------------------------##
 
 ## Imports ##
 import os;
@@ -28,7 +39,6 @@ ORGANIZATION_NAMES = [
     "AmazingCow-Imidiar",
     "AmazingCow",
 ];
-
 
 
 ## Helper functions ##
