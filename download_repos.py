@@ -8,85 +8,70 @@
 ## Copyright : N2OMatt - Copyright (c) 2017                                   ##
 ##                                                                            ##
 ## Description:                                                               ##
+##   Given a list of repositories in a file download all the repos            ##
+##   into a correct directories in the filesystem.                            ##
 ##                                                                            ##
+##   The list is expected to be:                                              ##
+##     Name_Of_The_Foler : https://url_of_repo.git                            ##
 ##----------------------------------------------------------------------------##
 
 ################################################################################
 ## Imports                                                                    ##
 ################################################################################
-import os;
+## Python
 import os.path;
-import urllib;
-import json;
-import sys;
-
-#Sometimes I don't have termcolor.
-try:
-    from termcolor import colored;
-except ImportError, e:
-    def colored(msg, color):
-        return msg;
-
-
-## Paths.
-BASE_URL  = "https://api.github.com/users/{ORGANIZATION_NAME}/repos"
-BASE_PATH = os.path.expanduser("~/Documents/Projects/AmazingCow");
-
-
-ORGANIZATION_NAMES = [
-    "AmazingCow-Game-Core",
-    "AmazingCow-Game-Framework",
-    "AmazingCow-Game-Tool",
-    "AmazingCow-Game",
-    "AmazingCow-Libs",
-    "AmazingCow-Tools",
-    "AmazingCow-Imidiar",
-    "AmazingCow",
-];
+import os;
+import pdb;
+## Project
+import helpers;
 
 
 ################################################################################
 ## Helper Functions                                                           ##
 ################################################################################
 ## Helper functions ##
-def make_dir(name, base_path):
-    fullname = os.path.join(base_path, name);
+def make_dir(base_path):
+    fullname = os.path.abspath(
+        os.path.expanduser(
+            base_path
+        )
+    );
+
     if(os.path.isdir(fullname) == False):
         print "Creating directory: ({0})".format(fullname);
         os.system("mkdir -p {0}".format(fullname));
 
     return fullname;
 
-def fetch_list_repos(organization_name):
-    url      = BASE_URL.format(ORGANIZATION_NAME=organization_name);
-    response = urllib.urlopen(url);
-    data     = json.loads(response.read());
+def parse_repos_list(filename):
+    lines     = open(os.path.abspath(filename)).readlines();
+    info_list = [];
 
+    for line in lines:
+        name, url = line.split(",");
+        info = {
+            "name" : name.strip().replace("\n",""),
+            "url"  : url.strip ().replace("\n","")
+        };
+        info_list.append(info);
 
-    print "Fetching repos for: ({0})".format(organization_name);
-    repos = [];
-    for info in data:
-        repos.append({
-          "url"  : info["clone_url"],
-          "name" : info["name"]
-        });
+    return info_list;
 
-    return repos;
+def clone_repos(repos_list, repos_dir):
+    for repo in repos_list:
+        repo_name     = repo["name"];
+        repo_url      = repo["url" ];
+        repo_full_dir = os.path.join(repos_dir, repo_name);
 
-def clone_repos(repos_info, repos_dir):
-    for repo_info in repos_info:
-        print "Clonning repo ({0}) in ({1})".format(repo_info["name"], repos_dir);
-
-        repo_full_dir = os.path.join(repos_dir, repo_info["name"]);
-
+        print "Clonning repo ({0}) in ({1})".format(repo_name, repos_dir);
         if(os.path.isdir(repo_full_dir)):
             print "Repo already cloned...";
             continue;
 
         ## Commands...
-        mkdir    = "mkdir -p {0}".format(repo_full_dir);
-        cd       = "cd {0}".format(repo_full_dir);
-        clone    = "git clone {0} .".format(repo_info["url"]);
+        mkdir    = "mkdir -p {0}"   .format(repo_full_dir);
+        cd       = "cd {0}"         .format(repo_full_dir);
+        clone    = "git clone {0} .".format(repo_url);
         sub_init = "git submodule update --init --recursive";
 
         full_cmd = "{0} && {1} && {2} && {3}".format(
@@ -95,20 +80,41 @@ def clone_repos(repos_info, repos_dir):
             clone,
             sub_init
         );
-        os.system(full_cmd);
 
+        os.system(full_cmd);
 
 ################################################################################
 ## Script                                                                     ##
 ################################################################################
 def main():
-    org_name  = sys.argv[1];
-    base_path = sys.argv[2];
+    ## Get options...
+    options = helpers.getoptions_init([
+        "org=",
+        "base-path=",
+        "repos-list=",
+    ]);
 
-    repos_dir  = make_dir(org_name, base_path);
-    repos_info = fetch_list_repos(org_name);
+    ## Init...
+    org_name   = helpers.getoptions_getarg(options, "org"       );
+    base_path  = helpers.getoptions_getarg(options, "base-path" );
+    repos_list = helpers.getoptions_getarg(options, "repos-list");
+
+    ## Check...
+    org_name   = helpers.check_and_clean("org",        org_name  );
+    base_path  = helpers.check_and_clean("base-path",  base_path );
+    repos_list = helpers.check_and_clean("repos-list", repos_list);
+
+    ## Create the base directory, parse the repos list
+    ## and start clonning the repositories.
+    repos_dir  = make_dir(base_path);
+    repos_info = parse_repos_list(repos_list);
     clone_repos(repos_info, repos_dir);
 
 
 if __name__ == '__main__':
-    main();
+    try:
+        main();
+    except Exception as e:
+        pdb.set_trace();
+        raise e
+
