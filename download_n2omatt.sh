@@ -14,7 +14,7 @@
 ORGS="N2OMatt      \
       N2OMattForks";
 
-BASE_PATH="$HOME/Documents/Projects/CARALHO";
+BASE_PATH="$HOME/Documents/Projects/n2omatt";
 
 for ORG in $ORGS; do
     ./github_repo_fetcher.py \
