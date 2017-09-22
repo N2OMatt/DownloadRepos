@@ -18,6 +18,7 @@ ORGS="AmazingCow-Game-Core      \
       AmazingCow-Libs           \
       AmazingCow-Tools          \
       AmazingCow-Imidiar        \
+      AmazingCow-Services       \
       AmazingCow";
 
 BASE_PATH="$HOME/Documents/Projects/AmazingCow"
