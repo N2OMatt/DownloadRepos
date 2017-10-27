@@ -11,9 +11,7 @@
 ##   Clone all N2OMatt's public repos.                                        ##
 ##----------------------------------------------------------------------------##
 
-ORGS="N2OMatt      \
-      N2OMattForks";
-
+ORGS="N2OMatt";
 BASE_PATH="$HOME/Documents/Projects/";
 
 for ORG in $ORGS; do
