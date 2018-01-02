@@ -1,11 +1,11 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 ##----------------------------------------------------------------------------##
 ## File      : download_repos.py                                              ##
 ## Project   : DownloadRepos                                                  ##
 ## Author    : n2omatt <n2omatt@amazingcow.com>                               ##
 ## Date      : Jul 22, 2017                                                   ##
 ## License   : GPLv3                                                          ##
-## Copyright : N2OMatt - Copyright (c) 2017                                   ##
+## Copyright : N2OMatt - 2017, 2018                                           ##
 ##                                                                            ##
 ## Description:                                                               ##
 ##   Given a list of repositories in a file download all the repos            ##

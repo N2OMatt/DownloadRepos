@@ -1,11 +1,11 @@
-#!/bin/bash
+#!/usr/bin/env bash
 ##----------------------------------------------------------------------------##
 ## File      : download_n2omatt.sh                                            ##
 ## Project   : DownloadRepos                                                  ##
 ## Author    : n2omatt <n2omatt@amazingcow.com>                               ##
 ## Date      : September 06, 2017                                             ##
 ## License   : GPLv3                                                          ##
-## Copyright : N2OMatt - Copyright (c) 2017                                   ##
+## Copyright : N2OMatt - 2017, 2018                                           ##
 ##                                                                            ##
 ## Description:                                                               ##
 ##   Clone all N2OMatt's public repos.                                        ##

@@ -1,11 +1,11 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 ##----------------------------------------------------------------------------##
 ## File      : github_repo_fetcher.py                                         ##
 ## Project   : DownloadRepos                                                  ##
 ## Author    : n2omatt <n2omatt@amazingcow.com>                               ##
 ## Date      : September 05, 2017 (Happy Birthday Daddy)                      ##
 ## License   : GPLv3                                                          ##
-## Copyright : N2OMatt - Copyright (c) 2017                                   ##
+## Copyright : N2OMatt - 2017, 2018                                           ##
 ##                                                                            ##
 ## Description:                                                               ##
 ##   Download and save the list of repositories from GitHub in                ##
