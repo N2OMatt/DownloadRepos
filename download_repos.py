@@ -68,20 +68,26 @@ def clone_repos(repos_list, repos_dir):
             print "Repo already cloned...";
             continue;
 
-        ## Commands...
-        mkdir    = "mkdir -p {0}"   .format(repo_full_dir);
-        cd       = "cd {0}"         .format(repo_full_dir);
-        clone    = "git clone {0} .".format(repo_url);
-        sub_init = "git submodule update --init --recursive";
+        ## Create the Respository directory.
+        os.makedirs(repo_full_dir);
 
-        full_cmd = "{0} && {1} && {2} && {3}".format(
-            mkdir,
-            cd,
-            clone,
-            sub_init
+        ## Go to it to perform the git commands.
+        old_cwd = os.getcwd();
+        os.chdir(repo_full_dir);
+
+        ## Git commands...        
+        cmd_clone    = "git clone {0} .".format(repo_url);
+        cmd_sub_init = "git submodule update --init --recursive";
+
+        full_cmd = "{CMD_CLONE} && {CMD_SUB_INIT}".format(            
+            CMD_CLONE   = cmd_clone,
+            CMD_SUB_INIT= cmd_sub_init
         );
 
         os.system(full_cmd);
+
+        ## Restore the cwd...
+        os.chdir(old_cwd);
 
 ################################################################################
 ## Script                                                                     ##
