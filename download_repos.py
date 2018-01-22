@@ -38,8 +38,8 @@ def make_dir(base_path):
     );
 
     if(os.path.isdir(fullname) == False):
-        print "Creating directory: ({0})".format(fullname);
-        os.system("mkdir -p {0}".format(fullname));
+        print "Creating directory: ({0})".format(fullname);        
+        os.makedirs(fullname);
 
     return fullname;
 
