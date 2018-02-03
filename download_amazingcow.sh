@@ -11,7 +11,8 @@
 ##   Clone all public AmazingCow's repos.                                     ##
 ##----------------------------------------------------------------------------##
 
-ORGS="AmazingCow-Game-Core      \
+ORGS="AmazingCow-Apps           \
+      AmazingCow-Game-Core      \
       AmazingCow-Game-Framework \
       AmazingCow-Game-Tool      \
       AmazingCow-Game           \
@@ -19,6 +20,7 @@ ORGS="AmazingCow-Game-Core      \
       AmazingCow-Tools          \
       AmazingCow-Imidiar        \
       AmazingCow-Services       \
+      AmazingCow-UnixLike       \
       AmazingCow";
 
 BASE_PATH="$HOME/Documents/Projects/AmazingCow"
@@ -35,4 +37,3 @@ for ORG in $ORGS; do
 
     rm $ORG.list;
 done;
-
