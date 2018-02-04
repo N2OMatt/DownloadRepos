@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 ##----------------------------------------------------------------------------##
 ## File      : download_amazingcow.sh                                         ##
 ## Project   : DownloadRepos                                                  ##
@@ -11,6 +11,7 @@
 ##   Clone all public AmazingCow's repos.                                     ##
 ##----------------------------------------------------------------------------##
 
+set -e
 ORGS="AmazingCow-Apps           \
       AmazingCow-Game-Core      \
       AmazingCow-Game-Framework \

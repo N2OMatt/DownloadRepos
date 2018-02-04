@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 ##----------------------------------------------------------------------------##
 ## File      : download_all.sh                                                ##
 ## Project   : DownloadRepos                                                  ##
