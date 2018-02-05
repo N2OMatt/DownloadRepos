@@ -22,7 +22,7 @@
 ## Github repos                                                               ##
 ##----------------------------------------------------------------------------##
 ORGS="N2OMatt";
-REAL_HOME=$(/usr/locak/bin/user-real-home);
+REAL_HOME=$(/usr/local/bin/user-real-home);
 BASE_PATH="$REAL_HOME/Documents/Projects";
 
 for ORG in $ORGS; do
