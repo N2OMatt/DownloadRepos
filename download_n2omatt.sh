@@ -22,7 +22,8 @@
 ## Github repos                                                               ##
 ##----------------------------------------------------------------------------##
 ORGS="N2OMatt";
-BASE_PATH="$HOME/Documents/Projects";
+REAL_HOME=$(/usr/locak/bin/user-real-home);
+BASE_PATH="$REAL_HOME/Documents/Projects";
 
 for ORG in $ORGS; do
     ./github_repo_fetcher.py \

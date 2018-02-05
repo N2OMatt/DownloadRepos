@@ -24,7 +24,8 @@ ORGS="AmazingCow-Apps           \
       AmazingCow-UnixLike       \
       AmazingCow";
 
-BASE_PATH="$HOME/Documents/Projects/AmazingCow"
+REAL_HOME=$(/usr/local/bin/user-real-home);
+BASE_PATH="$REAL_HOME/Documents/Projects/AmazingCow"
 
 for ORG in $ORGS; do
     ./github_repo_fetcher.py \
